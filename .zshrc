@@ -73,7 +73,7 @@ ZSH_THEME="robbyrussell"
 
 zstyle ':omz:plugins:nvm' lazy yes
 
-plugins=(git zsh-syntax-highlighting nvm)
+plugins=(git nvm)
 
 source $ZSH/oh-my-zsh.sh
 
