@@ -113,3 +113,4 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
+export XDG_CONFIG_HOME=~/.config
