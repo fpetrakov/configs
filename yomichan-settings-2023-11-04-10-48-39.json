@@ -1,0 +1,308 @@
+{
+    "version": 0,
+    "date": "2023-11-04 10:48:39",
+    "url": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/",
+    "manifest": {
+        "applications": {
+            "gecko": {
+                "id": "alex@foosoft.net",
+                "strict_max_version": null,
+                "strict_min_version": "55.0",
+                "update_url": null
+            }
+        },
+        "author": "Alex Yatskov",
+        "browser_specific_settings": null,
+        "description": "Japanese dictionary with Anki integration",
+        "developer": null,
+        "homepage_url": null,
+        "install_origins": null,
+        "manifest_version": 2,
+        "name": "Yomichan",
+        "short_name": null,
+        "version": "20.5.22.1",
+        "background": {
+            "page": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/bg/background.html",
+            "persistent": true
+        },
+        "content_scripts": [
+            {
+                "all_frames": true,
+                "css": null,
+                "exclude_globs": null,
+                "exclude_matches": null,
+                "include_globs": null,
+                "js": [
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/js/core.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/js/dom.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/js/api.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/js/dynamic-loader.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/js/text-scanner.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/document.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/frontend-api-sender.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/frontend-api-receiver.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/popup.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/source.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/popup-factory.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/frame-offset-forwarder.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/popup-proxy.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/frontend.js",
+                    "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/fg/js/content-script-main.js"
+                ],
+                "match_about_blank": true,
+                "matches": [
+                    "http://*/*",
+                    "https://*/*",
+                    "file://*/*"
+                ],
+                "run_at": "document_idle"
+            }
+        ],
+        "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+        "granted_host_permissions": false,
+        "hidden": false,
+        "icons": {
+            "16": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon16.png",
+            "19": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon19.png",
+            "32": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon32.png",
+            "38": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon38.png",
+            "48": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon48.png",
+            "64": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon48.png",
+            "128": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon128.png"
+        },
+        "incognito": "spanning",
+        "minimum_chrome_version": "57.0.0.0",
+        "minimum_opera_version": null,
+        "optional_permissions": [
+            "clipboardRead"
+        ],
+        "options_ui": {
+            "browser_style": false,
+            "chrome_style": null,
+            "open_in_tab": true,
+            "page": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/bg/settings.html"
+        },
+        "permissions": [
+            "<all_urls>",
+            "storage",
+            "clipboardWrite",
+            "unlimitedStorage",
+            "nativeMessaging"
+        ],
+        "web_accessible_resources": [
+            "fg/float.html"
+        ],
+        "browser_action": {
+            "browser_style": false,
+            "default_area": null,
+            "default_icon": {
+                "16": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon16.png",
+                "19": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon19.png",
+                "32": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon32.png",
+                "38": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon38.png",
+                "48": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon48.png",
+                "64": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon48.png",
+                "128": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/mixed/img/icon128.png"
+            },
+            "default_popup": "moz-extension://58db6d2d-76d4-44f0-8a5c-d664e746b049/bg/context.html",
+            "default_title": "Yomichan",
+            "theme_icons": null
+        },
+        "chrome_settings_overrides": null,
+        "commands": {
+            "toggle": {
+                "description": "Toggle text scanning",
+                "suggested_key": {
+                    "additionalProperties": null,
+                    "android": null,
+                    "chromeos": null,
+                    "default": "Alt+Delete",
+                    "ios": null,
+                    "linux": null,
+                    "mac": null,
+                    "windows": null
+                }
+            },
+            "search": {
+                "description": "Open search window",
+                "suggested_key": {
+                    "additionalProperties": null,
+                    "android": null,
+                    "chromeos": null,
+                    "default": "Alt+Insert",
+                    "ios": null,
+                    "linux": null,
+                    "mac": null,
+                    "windows": null
+                }
+            }
+        },
+        "devtools_page": null,
+        "omnibox": null,
+        "page_action": null,
+        "sidebar_action": null,
+        "chrome_url_overrides": null,
+        "declarative_net_request": null,
+        "default_locale": null,
+        "l10n_resources": null,
+        "protocol_handlers": null,
+        "telemetry": null,
+        "theme_experiment": null,
+        "user_scripts": null,
+        "experiment_apis": null,
+        "options_page": "bg/settings.html"
+    },
+    "environment": {
+        "browser": "firefox",
+        "platform": {
+            "os": "linux"
+        },
+        "modifiers": {
+            "keys": [
+                {
+                    "value": "alt",
+                    "name": "Alt"
+                },
+                {
+                    "value": "ctrl",
+                    "name": "Ctrl"
+                },
+                {
+                    "value": "shift",
+                    "name": "Shift"
+                }
+            ],
+            "separator": " + "
+        }
+    },
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0",
+    "options": {
+        "profiles": [
+            {
+                "name": "Default",
+                "options": {
+                    "general": {
+                        "enable": true,
+                        "enableClipboardPopups": false,
+                        "resultOutputMode": "group",
+                        "debugInfo": false,
+                        "maxResults": 32,
+                        "showAdvanced": false,
+                        "popupDisplayMode": "default",
+                        "popupWidth": 400,
+                        "popupHeight": 250,
+                        "popupHorizontalOffset": 0,
+                        "popupVerticalOffset": 10,
+                        "popupHorizontalOffset2": 10,
+                        "popupVerticalOffset2": 0,
+                        "popupHorizontalTextPosition": "below",
+                        "popupVerticalTextPosition": "before",
+                        "popupScalingFactor": 1,
+                        "popupScaleRelativeToPageZoom": false,
+                        "popupScaleRelativeToVisualViewport": true,
+                        "showGuide": true,
+                        "compactTags": false,
+                        "compactGlossaries": false,
+                        "mainDictionary": "JMdict (Russian)",
+                        "popupTheme": "default",
+                        "popupOuterTheme": "default",
+                        "customPopupCss": "",
+                        "customPopupOuterCss": "",
+                        "enableWanakana": true,
+                        "enableClipboardMonitor": false,
+                        "showPitchAccentDownstepNotation": true,
+                        "showPitchAccentPositionNotation": true,
+                        "showPitchAccentGraph": false,
+                        "showIframePopupsInRootFrame": false
+                    },
+                    "audio": {
+                        "enabled": true,
+                        "sources": [
+                            "jpod101"
+                        ],
+                        "volume": 100,
+                        "autoPlay": false,
+                        "customSourceUrl": "",
+                        "textToSpeechVoice": ""
+                    },
+                    "scanning": {
+                        "middleMouse": true,
+                        "touchInputEnabled": true,
+                        "selectText": true,
+                        "alphanumeric": true,
+                        "autoHideResults": false,
+                        "delay": 20,
+                        "length": 10,
+                        "modifier": "shift",
+                        "deepDomScan": false,
+                        "popupNestingMaxDepth": 0,
+                        "enablePopupSearch": false,
+                        "enableOnPopupExpressions": false,
+                        "enableOnSearchPage": true,
+                        "enableSearchTags": false
+                    },
+                    "translation": {
+                        "convertHalfWidthCharacters": "false",
+                        "convertNumericCharacters": "false",
+                        "convertAlphabeticCharacters": "false",
+                        "convertHiraganaToKatakana": "false",
+                        "convertKatakanaToHiragana": "variant",
+                        "collapseEmphaticSequences": "false"
+                    },
+                    "dictionaries": {
+                        "JMdict (Russian)": {
+                            "priority": 0,
+                            "enabled": true,
+                            "allowSecondarySearches": false
+                        }
+                    },
+                    "parsing": {
+                        "enableScanningParser": true,
+                        "enableMecabParser": false,
+                        "selectedParser": null,
+                        "termSpacing": true,
+                        "readingMode": "hiragana"
+                    },
+                    "anki": {
+                        "enable": true,
+                        "server": "http://127.0.0.1:8765",
+                        "tags": [
+                            "yomichan"
+                        ],
+                        "sentenceExt": 200,
+                        "screenshot": {
+                            "format": "png",
+                            "quality": 92
+                        },
+                        "terms": {
+                            "deck": "Японский",
+                            "model": "Japanese Basic",
+                            "fields": {
+                                "Word": "{expression}",
+                                "Kana": "{reading}",
+                                "Sentence": "{cloze-prefix}<b>{cloze-body}</b>{cloze-suffix}",
+                                "Meaning": "{glossary}",
+                                "Audio": "{audio}"
+                            }
+                        },
+                        "kanji": {
+                            "deck": null,
+                            "model": null,
+                            "fields": {}
+                        },
+                        "duplicateScope": "collection"
+                    },
+                    "version": 14
+                },
+                "conditionGroups": []
+            }
+        ],
+        "profileCurrent": 0,
+        "version": 1,
+        "global": {
+            "database": {
+                "prefixWildcardsSupported": false
+            }
+        }
+    }
+}
