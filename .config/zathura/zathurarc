@@ -1,6 +1,8 @@
 # Zathura configuration file
 # See man `man zathurarc'
 
+set selection-clipboard clipboard
+
 # theme
 set default-bg "#D4CCB9"
 set default-fg "#45363B"
@@ -14,3 +16,4 @@ set statusbar-fg "#20111A"
 set recolor "true"
 set recolor-lightcolor "#D4CCB9"
 set recolor-darkcolor "#45363B"
+
