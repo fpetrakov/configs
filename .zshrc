@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -101,16 +101,25 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias e="exit"
-alias p="~/Projects && ls"
+alias p="cd ~/Projects; ls"
 alias pn="pnpm"
+alias "yt-dlp"="yt-dlp --proxy 'socks5://127.0.0.1:10801'"
+alias dpi="~/Other/ciadpi -i 127.0.0.1 -p 10801 -d 1"
+alias e="exit"
+alias python="python3"
 
-setxkbmap -option caps:escape
+# case $- in *i*)
+#    [ -z "$TMUX" ] && exec tmux
+# esac
 
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
-fi
+# pnpm
+export PNPM_HOME="/home/fedya/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
-export XDG_CONFIG_HOME=~/.config
+# deno
+export DENO_INSTALL="/home/fedya/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
