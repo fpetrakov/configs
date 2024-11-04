@@ -1,0 +1,23 @@
+filter_class: "Anki"
+
+matches:
+  - trigger: ":pt"
+    replace: "prop:due=0 "
+  
+  - trigger: ":np"
+    replace: '"pitch accents:" "pitch accent positions:"'
+
+  - trigger: ":li"
+    replace: '"pitch accents:*<li>*"'
+
+  - trigger: ":k"
+    replace: "kanji:"
+
+  - trigger: ":w"
+    replace: "word:*$|$* reading:**"
+
+  - trigger: ":r"
+    replace: "reading:"
+
+  - trigger: ":i"
+    replace: '"deck:Japanese Input"'
