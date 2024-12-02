@@ -4,64 +4,69 @@
   "ankiDeck": "Japanese Input",
   "ankiFieldTemplates": [
     {
-      "behavior": "replace",
-      "field": "Sentence",
-      "value": ""
-    },
-    {
-      "behavior": "replace",
-      "field": "Reading",
-      "value": ""
-    },
-    {
-      "behavior": "replace",
       "field": "Word",
-      "value": ""
+      "value": "",
+      "behavior": "replace"
     },
     {
-      "behavior": "insertIfEmpty",
+      "field": "Sentence",
+      "value": "",
+      "behavior": "replace"
+    },
+    {
+      "field": "Reading",
+      "value": "",
+      "behavior": "replace"
+    },
+    {
       "field": "Audio",
-      "value": "{forvo-word-audio}"
+      "value": "{forvo-word-audio}",
+      "behavior": "insertIfEmpty"
     },
     {
-      "behavior": "replace",
       "field": "Meaning",
-      "value": ""
+      "value": "",
+      "behavior": "replace"
     },
     {
-      "behavior": "replace",
       "field": "Image / Screenshot",
-      "value": "{screenshot}"
+      "value": "{screenshot}",
+      "behavior": "insertIfEmpty"
     },
     {
-      "behavior": "replace",
       "field": "Sentence Furigana",
-      "value": ""
+      "value": "",
+      "behavior": "replace"
     },
     {
-      "behavior": "replace",
       "field": "Furigana",
-      "value": ""
+      "value": "",
+      "behavior": "replace"
     },
     {
-      "behavior": "replace",
       "field": "Pitch Accents",
-      "value": ""
+      "value": "",
+      "behavior": "replace"
     },
     {
-      "behavior": "replace",
       "field": "Pitch Accent Positions",
-      "value": ""
+      "value": "",
+      "behavior": "replace"
     },
     {
-      "behavior": "replace",
       "field": "Sentence Audio",
-      "value": "{sentence-audio}"
+      "value": "{sentence-audio}",
+      "behavior": "insertIfEmpty"
     },
     {
-      "behavior": "replace",
       "field": "Tags",
-      "value": ""
+      "value": "",
+      "behavior": "replace"
+    },
+    {
+      "field": "Frequencies",
+      "value": "",
+      "behavior": "replace"
     }
   ],
   "ankiModel": "Japanese Sentence Card",
@@ -76,7 +81,7 @@
   "forvoAudioVolumeMultiplier": 1,
   "gifFPS": 6,
   "imageFfmpegFlags": "",
-  "imageFormat": "jpg",
+  "imageFormat": "png",
   "imageResizeHeight": 720,
   "imageResizeSelection": "height",
   "imageResizeWidth": 1280,

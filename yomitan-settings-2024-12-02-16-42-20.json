@@ -1,84 +1,94 @@
 {
     "version": 0,
-    "date": "2024-11-21 07:31:10",
-    "url": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/",
+    "date": "2024-12-02 16:42:20",
+    "url": "chrome-extension://likgccmbimhjbgkjambclfkhldnlhbnn/",
     "manifest": {
-        "author": "TheMoeWay",
-        "browser_specific_settings": {
-            "gecko": {
-                "admin_install_only": null,
-                "id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
-                "strict_max_version": null,
-                "strict_min_version": "115.0",
-                "update_url": null
+        "action": {
+            "default_icon": {
+                "16": "images/icon16.png",
+                "19": "images/icon19.png",
+                "32": "images/icon32.png",
+                "38": "images/icon38.png",
+                "48": "images/icon48.png",
+                "64": "images/icon64.png",
+                "128": "images/icon128.png"
             },
-            "gecko_android": {
-                "strict_max_version": null,
-                "strict_min_version": "115.0"
-            }
+            "default_popup": "action-popup.html",
+            "default_title": "Yomitan"
         },
-        "description": "Japanese dictionary with Anki integration",
-        "developer": null,
-        "homepage_url": null,
-        "install_origins": null,
-        "manifest_version": 3,
-        "name": "Yomitan",
-        "short_name": null,
-        "version": "24.10.7.1",
+        "author": {
+            "email": "themoeway@googlegroups.com"
+        },
         "background": {
-            "page": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/background.html"
+            "service_worker": "sw.js",
+            "type": "module"
+        },
+        "commands": {
+            "openInfoPage": {
+                "description": "Open the info page"
+            },
+            "openPopupWindow": {
+                "description": "Open the popup window"
+            },
+            "openSearchPage": {
+                "description": "Open the search page",
+                "suggested_key": {
+                    "default": "Alt+Insert"
+                }
+            },
+            "openSettingsPage": {
+                "description": "Open the settings page"
+            },
+            "toggleTextScanning": {
+                "description": "Toggle text scanning on/off",
+                "suggested_key": {
+                    "default": "Alt+Delete"
+                }
+            }
         },
         "content_scripts": [
             {
                 "all_frames": true,
-                "css": null,
-                "exclude_globs": null,
-                "exclude_matches": null,
-                "include_globs": null,
                 "js": [
-                    "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/js/app/content-script-wrapper.js"
+                    "js/app/content-script-wrapper.js"
                 ],
                 "match_about_blank": true,
-                "match_origin_as_fallback": null,
                 "matches": [
                     "http://*/*",
                     "https://*/*",
                     "file://*/*"
                 ],
-                "run_at": "document_idle",
-                "world": "ISOLATED"
+                "run_at": "document_idle"
             }
         ],
         "content_security_policy": {
-            "extension_pages": "default-src 'self'; script-src 'self'; img-src blob: 'self'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *"
+            "extension_pages": "default-src 'self'; img-src blob: 'self'; style-src 'self' 'unsafe-inline'; media-src *; connect-src *",
+            "sandbox": "sandbox allow-scripts; default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'unsafe-inline'"
         },
-        "granted_host_permissions": false,
-        "hidden": false,
+        "description": "Japanese dictionary with Anki integration",
         "host_permissions": [
             "<all_urls>"
         ],
         "icons": {
-            "16": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon16.png",
-            "19": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon19.png",
-            "32": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon32.png",
-            "38": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon38.png",
-            "48": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon48.png",
-            "64": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon64.png",
-            "128": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon128.png"
+            "16": "images/icon16.png",
+            "19": "images/icon19.png",
+            "32": "images/icon32.png",
+            "38": "images/icon38.png",
+            "48": "images/icon48.png",
+            "64": "images/icon64.png",
+            "128": "images/icon128.png"
         },
-        "incognito": "spanning",
+        "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuFMG+/vjX2le7bR1dzuuLZwLxycxTxo033lLgMvO2BYQeQjIxhHazptr+34TX9oN71jnDxc11MWIl/pJPXVhdWyawrVNX9AVSz0kqOcvv0TqJAoVofLeAtRAeANjGjIM6QN46SAq9RAsKh60+0ZxYVWasFHB0gdbIaucJE54sXcUOGBsCah/ZziZMsunEhWpUC0nKT3eW9/eRQVHMBVFQ06R1luESf2f0EXbiS70smI0j3jb0xxWnbHQS8Bz20WZi0/kcysCmU/suMKCzdRXENWVcPG2xpcIYbSXBUHuP25jr3qElq5VEqeIUeHdYHd0GbkhlHPG0Cuo38q6D4lQ5wIDAQAB",
+        "manifest_version": 3,
         "minimum_chrome_version": "102.0.0.0",
-        "minimum_opera_version": null,
-        "optional_host_permissions": [],
+        "name": "Yomitan",
         "optional_permissions": [
             "clipboardRead",
             "nativeMessaging"
         ],
-        "options_page": null,
         "options_ui": {
-            "browser_style": false,
             "open_in_tab": true,
-            "page": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/settings.html"
+            "page": "settings.html"
         },
         "permissions": [
             "storage",
@@ -86,125 +96,53 @@
             "unlimitedStorage",
             "declarativeNetRequest",
             "scripting",
+            "offscreen",
             "contextMenus"
         ],
+        "sandbox": {
+            "pages": [
+                "template-renderer.html"
+            ]
+        },
+        "update_url": "https://clients2.google.com/service/update2/crx",
+        "version": "24.7.24.0",
         "web_accessible_resources": [
             {
-                "extension_ids": null,
                 "matches": [
                     "<all_urls>"
                 ],
                 "resources": [
-                    "/popup.html",
-                    "/js/*"
+                    "popup.html",
+                    "template-renderer.html",
+                    "js/*"
                 ]
             }
-        ],
-        "action": {
-            "browser_style": false,
-            "default_area": null,
-            "default_icon": {
-                "16": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon16.png",
-                "19": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon19.png",
-                "32": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon32.png",
-                "38": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon38.png",
-                "48": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon48.png",
-                "64": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon64.png",
-                "128": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/images/icon128.png"
-            },
-            "default_popup": "moz-extension://4fbec9e5-cf1f-41fb-adb3-372220ab813b/action-popup.html",
-            "default_title": "Yomitan",
-            "theme_icons": null
-        },
-        "chrome_settings_overrides": null,
-        "commands": {
-            "toggleTextScanning": {
-                "description": "Toggle text scanning on/off",
-                "suggested_key": {
-                    "additionalProperties": null,
-                    "android": null,
-                    "chromeos": null,
-                    "default": "Alt+Delete",
-                    "ios": null,
-                    "linux": null,
-                    "mac": null,
-                    "windows": null
-                }
-            },
-            "openInfoPage": {
-                "description": "Open the info page",
-                "suggested_key": null
-            },
-            "openSettingsPage": {
-                "description": "Open the settings page",
-                "suggested_key": null
-            },
-            "openSearchPage": {
-                "description": "Open the search page",
-                "suggested_key": {
-                    "additionalProperties": null,
-                    "android": null,
-                    "chromeos": null,
-                    "default": "Alt+Insert",
-                    "ios": null,
-                    "linux": null,
-                    "mac": null,
-                    "windows": null
-                }
-            },
-            "openPopupWindow": {
-                "description": "Open the popup window",
-                "suggested_key": null
-            }
-        },
-        "devtools_page": null,
-        "omnibox": null,
-        "page_action": null,
-        "sidebar_action": null,
-        "chrome_url_overrides": null,
-        "declarative_net_request": null,
-        "default_locale": null,
-        "l10n_resources": null,
-        "protocol_handlers": null,
-        "theme_experiment": null,
-        "experiment_apis": null,
-        "applications": {
-            "gecko": {
-                "admin_install_only": null,
-                "id": "{6b733b82-9261-47ee-a595-2dda294a4d08}",
-                "strict_max_version": null,
-                "strict_min_version": "115.0",
-                "update_url": null
-            },
-            "gecko_android": {
-                "strict_max_version": null,
-                "strict_min_version": "115.0"
-            }
-        }
+        ]
     },
     "environment": {
-        "browser": "firefox",
+        "browser": "chrome",
         "platform": {
             "os": "linux"
         }
     },
-    "userAgent": "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:132.0) Gecko/20100101 Firefox/132.0",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36",
     "permissions": {
         "origins": [
-            "*://jisho.org/*",
             "<all_urls>",
+            "file:///*",
             "http://*/*",
             "https://*/*"
         ],
         "permissions": [
-            "storage",
+            "clipboardRead",
             "clipboardWrite",
+            "contextMenus",
+            "nativeMessaging",
+            "storage",
             "unlimitedStorage",
             "declarativeNetRequest",
             "scripting",
-            "contextMenus",
-            "clipboardRead",
-            "nativeMessaging"
+            "offscreen"
         ]
     },
     "options": {
@@ -372,7 +310,8 @@
                         "hidePopupOnCursorExitDelay": 300,
                         "normalizeCssZoom": true,
                         "scanWithoutMousemove": true,
-                        "scanResolution": "character"
+                        "scanResolution": "character",
+                        "scanAltText": true
                     },
                     "translation": {
                         "textReplacements": {
@@ -383,28 +322,6 @@
                     },
                     "dictionaries": [
                         {
-                            "name": "JMdict (Russian)",
-                            "priority": 0,
-                            "enabled": true,
-                            "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible",
-                            "partsOfSpeechFilter": true,
-                            "useDeinflections": true,
-                            "styles": "",
-                            "alias": "JMdict (Russian)"
-                        },
-                        {
-                            "name": "JMdict",
-                            "priority": 0,
-                            "enabled": false,
-                            "allowSecondarySearches": false,
-                            "definitionsCollapsible": "not-collapsible",
-                            "partsOfSpeechFilter": true,
-                            "useDeinflections": true,
-                            "styles": "",
-                            "alias": "JMdict"
-                        },
-                        {
                             "name": "Kanjium Pitch Accents",
                             "priority": 0,
                             "enabled": true,
@@ -413,6 +330,66 @@
                             "partsOfSpeechFilter": true,
                             "useDeinflections": true,
                             "alias": "Kanjium Pitch Accents"
+                        },
+                        {
+                            "name": "JMdict [2024-07-31]",
+                            "priority": 0,
+                            "enabled": false,
+                            "allowSecondarySearches": false,
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "styles": ""
+                        },
+                        {
+                            "name": "JMdict (Russian) [2024-07-31]",
+                            "priority": 0,
+                            "enabled": true,
+                            "allowSecondarySearches": false,
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "styles": ""
+                        },
+                        {
+                            "name": "JLPT",
+                            "priority": 0,
+                            "enabled": true,
+                            "allowSecondarySearches": false,
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "styles": ""
+                        },
+                        {
+                            "name": "話し言葉 CSJ",
+                            "priority": 0,
+                            "enabled": true,
+                            "allowSecondarySearches": false,
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "styles": ""
+                        },
+                        {
+                            "name": "BCCWJ-LUW",
+                            "priority": 0,
+                            "enabled": true,
+                            "allowSecondarySearches": false,
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "styles": ""
+                        },
+                        {
+                            "name": "ウェブ NWJC",
+                            "priority": 0,
+                            "enabled": true,
+                            "allowSecondarySearches": false,
+                            "definitionsCollapsible": "not-collapsible",
+                            "partsOfSpeechFilter": true,
+                            "useDeinflections": true,
+                            "styles": ""
                         }
                     ],
                     "parsing": {
@@ -445,7 +422,8 @@
                                 "Pitch Accents": "{pitch-accents}",
                                 "Pitch Accent Positions": "",
                                 "Sentence Audio": "",
-                                "Tags": "{tags}"
+                                "Tags": "{tags}",
+                                "Frequencies": "{frequencies}"
                             }
                         },
                         "kanji": {
@@ -839,7 +817,7 @@
             }
         ],
         "profileCurrent": 0,
-        "version": 52,
+        "version": 47,
         "global": {
             "database": {
                 "prefixWildcardsSupported": false
