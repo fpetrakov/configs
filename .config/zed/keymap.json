@@ -29,8 +29,6 @@
   },
   {
     "context": "Terminal",
-    "bindings": {
-      // "ctrl-`": ""
-    }
+    "bindings": {}
   }
 ]
