@@ -19,5 +19,5 @@ matches:
   - trigger: ":r"
     replace: "reading:"
 
-  - trigger: ":i"
-    replace: '"deck:Japanese Input"'
+  - trigger: ":il"
+    replace: '"deck:Japanese Input" is:learn'
