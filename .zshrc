@@ -108,9 +108,9 @@ alias dpi="~/Other/ciadpi -i 127.0.0.1 -p 10801 -d 1"
 alias e="exit"
 alias python="python3"
 
-case $- in *i*)
-  [ -z "$TMUX" ] && exec tmux
-esac
+# case $- in *i*)
+  # [ -z "$TMUX" ] && exec tmux
+# esac
 
 # pnpm
 export PNPM_HOME="/home/fedya/.local/share/pnpm"
