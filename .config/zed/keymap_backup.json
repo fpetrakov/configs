@@ -9,11 +9,8 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "j": ["workspace::SendKeystrokes", "g j"],
-      "k": ["workspace::SendKeystrokes", "g k"],
-
       "space f s": "workspace::Save",
-      "space f y": "workspace::CopyRelativePath",
+      "space f y": "editor::CopyRelativePath",
       "space f t": "project_panel::ToggleFocus",
 
       "space b p": "pane::GoBack",
@@ -32,8 +29,6 @@
   },
   {
     "context": "Terminal",
-    "bindings": {
-      // "ctrl-`": ""
-    }
+    "bindings": {}
   }
 ]

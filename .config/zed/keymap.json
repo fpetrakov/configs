@@ -9,9 +9,6 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "j": ["workspace::SendKeystrokes", "g j"],
-      "k": ["workspace::SendKeystrokes", "g k"],
-
       "space f s": "workspace::Save",
       "space f y": "workspace::CopyRelativePath",
       "space f t": "project_panel::ToggleFocus",
@@ -28,12 +25,6 @@
     "bindings": {
       "space f n": "project_panel::NewFile",
       "space f t": "project_panel::ToggleFocus"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {
-      // "ctrl-`": ""
     }
   }
 ]
