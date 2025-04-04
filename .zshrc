@@ -107,19 +107,12 @@ alias "yt-dlp"="yt-dlp --proxy 'socks5://127.0.0.1:10801'"
 alias dpi="~/Other/ciadpi -i 127.0.0.1 -p 10801 -d 1"
 alias e="exit"
 alias python="python3"
+alias espanso="~/Other/Espanso.AppImage"
 
 # case $- in *i*)
   # [ -z "$TMUX" ] && exec tmux
 # esac
 
-# pnpm
-export PNPM_HOME="/home/fedya/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
-
-# deno
-export DENO_INSTALL="/home/fedya/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
